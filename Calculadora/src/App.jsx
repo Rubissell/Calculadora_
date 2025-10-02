@@ -21,7 +21,7 @@ function App() {
 
   const handleResult = () => {
     try {
-      // ⚠️ eval solo como ejemplo rápido, en proyectos reales usa un parser de expresiones
+  
       setInput(eval(input).toString());
     } catch {
       setInput("Error");
@@ -33,14 +33,14 @@ function App() {
       <div className="bg-white shadow-2xl rounded-2xl p-6 w-80">
         <h1 className="text-2xl font-bold text-center mb-4 text-gray-700">Calculadora</h1>
 
-        {/* Pantalla */}
+      
         <div className="bg-gray-100 rounded-lg p-4 mb-4 text-right text-2xl font-mono text-gray-800 shadow-inner">
           {input || "0"}
         </div>
 
-        {/* Botones */}
+       
         <div className="grid grid-cols-4 gap-3">
-          {/* Botón Clear */}
+        
           <button
             onClick={handleClear}
             className="col-span-2 bg-red-400 hover:bg-red-500 text-white font-bold py-2 rounded-lg shadow-md transition"
@@ -48,7 +48,7 @@ function App() {
             C
           </button>
 
-          {/* Botón Delete */}
+          
           <button
             onClick={handleDelete}
             className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 rounded-lg shadow-md transition"
@@ -56,7 +56,7 @@ function App() {
             ⌫
           </button>
 
-          {/* Operador división */}
+          
           <button
             onClick={() => handleClick("/")}
             className="bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 rounded-lg shadow-md transition"
@@ -64,7 +64,7 @@ function App() {
             ÷
           </button>
 
-          {/* Números */}
+      
           {numeros.map((num) => (
             <button
               key={num}
@@ -75,7 +75,7 @@ function App() {
             </button>
           ))}
 
-          {/* Operadores */}
+          
           {operadores.map((op) => (
             <button
               key={op}
@@ -86,7 +86,7 @@ function App() {
             </button>
           ))}
 
-          {/* Igual */}
+        
           <button
             onClick={handleResult}
             className="col-span-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-lg shadow-md transition"
